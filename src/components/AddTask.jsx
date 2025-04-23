@@ -72,7 +72,7 @@ function AddTask({ onAddTaskSubmit }) {
           setAltura("");
           setSexo("");
         }}
-        className="shadow w-full bg-green-900 text-white tex-white px-4 py-2 rounded-md font-medium"
+        className="shadow w-full bg-green-800 text-white tex-white px-4 py-2 rounded-md font-medium"
       >
         Adicionar
       </button>
