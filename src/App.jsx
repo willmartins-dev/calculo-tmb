@@ -3,9 +3,7 @@ import Tasks from "./components/Tasks";
 import AddTask from "./components/AddTask";
 
 function App() {
-  const [tasks, setTasks] = useState(
-    JSON.parse(localStorage.getItem("tmb") || [])
-  );
+  const [tasks, setTasks] = useState(JSON.parse(localStorage.getItem("tmb")));
 
   useEffect(() => {
     localStorage.setItem("tmb", JSON.stringify(tasks));
