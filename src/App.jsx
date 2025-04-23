@@ -3,7 +3,16 @@ import Tasks from "./components/Tasks";
 import AddTask from "./components/AddTask";
 
 function App() {
-  const [tasks, setTasks] = useState(JSON.parse(localStorage.getItem("tmb")));
+  const [tasks, setTasks] = useState(() => {
+    const saveData = localStorage.getItem("tmb");
+
+    try {
+      return saveData ? JSON.parse(saveData) : [];
+    } catch (error) {
+      console.error("Erro em JSON parsing localStorage");
+      return [];
+    }
+  });
 
   useEffect(() => {
     localStorage.setItem("tmb", JSON.stringify(tasks));
