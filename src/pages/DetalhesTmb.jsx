@@ -14,8 +14,8 @@ function DetalhesTmb() {
   const feminino = 655 + 9.6 * peso + 1.8 * altura - 4.7 * idade;
 
   return (
-    <div className="w-screen h-screen bg-slate-500 p-6 space-y-4 justify-center flex">
-      <div className="w-[500px]">
+    <div className="w-screen h-screen bg-slate-500 p-6  justify-center flex">
+      <div className="w-[500px] space-y-4">
         <div className="flex justify-center relative m-6">
           <button
             onClick={() => navigate(-1)}
