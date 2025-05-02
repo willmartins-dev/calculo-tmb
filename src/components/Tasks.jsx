@@ -13,8 +13,9 @@ function Tasks({ tasks, onDeleteTask, onTaskClick }) {
     const query = new URLSearchParams();
     query.set("nome", task.nome);
     query.set("idade", task.idade);
-    query.set("peso", task.peso);
-    query.set("altura", task.altura);
+    query.set("peso", task.altura);
+    query.set("altura", task.peso);
+
     query.set("sexo", task.sexo);
 
     navigate(`/resultado?${query.toString()}`);
