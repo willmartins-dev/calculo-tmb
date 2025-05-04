@@ -54,8 +54,8 @@ function DetalhesTmb() {
       : (Math.round(feminino * 1.725) - prot_gord_kcal_avan) / 4;
 
   return (
-    <div className="grid w-screen h-screen justify-center space-y-3">
-      <div className="text-white space-y-4 flex flex-col items-center justify-center pb-4 bg-black/30 backdrop-blur-md rounded-md border border-gray-500">
+    <div className="bg-white/30 backdrop-blur-sm grid w-screen h-screen justify-center space-y-3">
+      <div className="text-white space-y-4 flex flex-col items-center justify-center pb-4 bg-black/50 backdrop-blur-md rounded-md border border-gray-500">
         <h3 className="text-2xl font-bold py-3 flex items-center justify-center gap-2">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -158,7 +158,7 @@ function DetalhesTmb() {
         </h4>
       </div>
 
-      <div className="flex flex-col p-3">
+      <div className="bg-black/50 backdrop-blur-md flex flex-col p-3 rounded-md border border-gray-600">
         <h1 className="text-white text-3xl justify-center">
           Qual é o seu nível de atividade física?
         </h1>

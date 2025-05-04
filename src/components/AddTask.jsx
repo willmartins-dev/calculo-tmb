@@ -19,7 +19,7 @@ function AddTask({ onAddTaskSubmit }) {
   ];
   console.log(sexo);
   return (
-    <div className="bg-black/30 backdrop-blur-md space-y-4 p-4 rounded-md  shadow-md border border-solid border-gray-400">
+    <div className="box-reveal-left bg-black/50 backdrop-blur-md space-y-4 p-4 rounded-md  shadow-md border border-solid border-gray-400">
       <h1 className="text-white text-2xl flex justify-center">
         Preencha seus dados abaixo
       </h1>

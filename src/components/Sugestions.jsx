@@ -1,5 +1,4 @@
-import React, { PureComponent } from "react";
-import { ResponsiveContainer, PieChart, Pie, Legend } from "recharts";
+import React from "react";
 
 const Sugestions = ({ titulo, tipo, prot, gord, carbo, atividade }) => {
   const tmb = Math.round(tipo * atividade);
@@ -10,22 +9,9 @@ const Sugestions = ({ titulo, tipo, prot, gord, carbo, atividade }) => {
   const pct_gord_kcal = (gord_kcal / tmb) * 100;
   const pct_carb_kcal = (carb_kcal / tmb) * 100;
 
-  const data = [
-    { name: "PROTEÍNAS", value: Math.round(pct_prot_kcal) },
-    { name: "CARBOIDRATOS", value: Math.round(pct_carb_kcal) },
-    { name: "GORDURAS", value: Math.round(pct_gord_kcal) },
-  ];
-
   return (
     <div className="flex flex-col my-2">
-      <div className=" bg-white shadow-md rounded p-2 flex flex-col items-center">
-        <div style={{ width: "100%", height: 200 }}>
-          <ResponsiveContainer>
-            <PieChart>
-              <Pie dataKey="value" data={data} fill="#CCC" label />
-            </PieChart>
-          </ResponsiveContainer>
-        </div>
+      <div className=" bg-black/70 shadow-md rounded p-2 flex flex-col items-center">
         <div className="dataCard customerCard"></div>
         <h4 className="text-red-700 text-2xl">
           {titulo}:&nbsp;
@@ -33,15 +19,15 @@ const Sugestions = ({ titulo, tipo, prot, gord, carbo, atividade }) => {
           Kcal
         </h4>
 
-        <h4>
-          Proteínas: {prot}g ({prot_kcal}kcal)
+        <h4 className="text-white">
+          Proteínas: {Math.round(prot)}g ({prot_kcal}kcal)
         </h4>
-        <h4>
-          Gorduras: {gord}g ({gord_kcal}kcal)
+        <h4 className="text-white">
+          Gorduras: {Math.round(gord)}g ({gord_kcal}kcal)
         </h4>
-        <h4>
+        <h4 className="text-white">
           Carboidratos:&nbsp;
-          {carbo}g ({carb_kcal}kcal)
+          {Math.round(carbo)}g ({Math.round(carb_kcal)}kcal)
         </h4>
       </div>
     </div>

@@ -46,7 +46,7 @@ function App() {
   return (
     <div className="w-screen h-screen flex justify-center p-6 bg-white/30 backdrop-blur-sm">
       <div className="w-[500px] space-y-4">
-        <h1 className="flex flex-col items-center justify-center text-3xl text-green-950 font-bold text-center bg-white rounded-md p-4 shadow-md">
+        <h1 className="box-reveal-top flex flex-col items-center justify-center text-3xl text-green-950 font-bold text-center bg-white rounded-md p-4 shadow-md">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
