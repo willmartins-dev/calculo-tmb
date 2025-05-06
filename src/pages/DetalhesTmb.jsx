@@ -16,7 +16,7 @@ function DetalhesTmb() {
   const agua = (peso * 35) / 1000;
 
   //Sedentario
-  let prot_sed_g = peso * 1;
+  let prot_sed_g = peso * 1.2;
   let gord_sed_g = peso * 0.8;
   let proteina_sed_kcal = prot_sed_g * 4;
   let gordura_sed_kcal = gord_sed_g * 9;
@@ -29,7 +29,7 @@ function DetalhesTmb() {
       : (Math.round(feminino * 1.2) - prot_gord_kcal) / 4;
 
   //Intermediário
-  let prot_int_g = peso * 1.4;
+  let prot_int_g = peso * 1.6;
   let gord_int_g = peso * 1;
   let prot_int_kcal = prot_int_g * 4;
   let gord_int_kcal = gord_int_g * 9;

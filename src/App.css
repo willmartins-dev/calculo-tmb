@@ -1,3 +1,14 @@
+.pct-graph {
+  height: 20px;
+  width: 0;
+  text-align: center;
+  animation: progressBar 1s forwards;
+}
+@keyframes progressBar {
+  to {
+    width: var(--bar-width);
+  }
+}
 .box-reveal-top {
   animation-name: reveal-top;
   animation-duration: 1s;

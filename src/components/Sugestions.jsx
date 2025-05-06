@@ -11,24 +11,41 @@ const Sugestions = ({ titulo, tipo, prot, gord, carbo, atividade }) => {
 
   return (
     <div className="flex flex-col my-2">
-      <div className=" bg-black/70 shadow-md rounded p-2 flex flex-col items-center">
-        <div className="dataCard customerCard"></div>
-        <h4 className="text-red-700 text-2xl">
+      <div className=" bg-black/70 shadow-md rounded p-2 flex flex-col">
+        <h4 className="bg-white/30 backdrop-blur-sm flex justify-center rounded-md text-white py-2 text-2xl mb-4">
           {titulo}:&nbsp;
           {tmb}
-          Kcal
+          Kcal/dia
         </h4>
 
         <h4 className="text-white">
-          Proteínas: {Math.round(prot)}g ({prot_kcal}kcal)
+          Proteínas: {Math.round(prot)}g ({prot_kcal}kcal)/dia
         </h4>
+        <div
+          className="pct-graph felx justify-center rounded-md font-semibold bg-red-600"
+          style={{ "--bar-width": `${pct_prot_kcal}%` }}
+        >
+          {Math.round(pct_prot_kcal)}%
+        </div>
         <h4 className="text-white">
-          Gorduras: {Math.round(gord)}g ({gord_kcal}kcal)
+          Gorduras: {Math.round(gord)}g ({gord_kcal}kcal)/dia
         </h4>
+        <div
+          className="pct-graph felx justify-center rounded-md bg-yellow-500 font-semibold"
+          style={{ "--bar-width": `${pct_gord_kcal}%`, transition: "width 1s" }}
+        >
+          {Math.round(pct_gord_kcal)}%
+        </div>
         <h4 className="text-white">
           Carboidratos:&nbsp;
-          {Math.round(carbo)}g ({Math.round(carb_kcal)}kcal)
+          {Math.round(carbo)}g ({Math.round(carb_kcal)}kcal)/dia
         </h4>
+        <div
+          className="pct-graph felx justify-center rounded-md bg-orange-500 font-semibold"
+          style={{ "--bar-width": `${pct_carb_kcal}%`, transition: "width 1s" }}
+        >
+          {Math.round(pct_carb_kcal)}%
+        </div>
       </div>
     </div>
   );
